@@ -10,7 +10,7 @@ def main():
     while True:
         display_menu()
         try:
-            choice = int(input("Enter your choice: "))  # ✅ convert input to int
+            choice = int(input("Enter your choice: "))  # Input as number
         except ValueError:
             print("Invalid choice. Please enter a number.")
             continue
@@ -28,11 +28,8 @@ def main():
                 print(f"{item} not found in the list.")
         elif choice == 3:
             print("Your Shopping List:")
-            if not shopping_list:
-                print("The list is empty.")
-            else:
-                for i, item in enumerate(shopping_list, 1):
-                    print(f"{i}. {item}")
+            for i, item in enumerate(shopping_list, 1):
+                print(f"{i}. {item}")
         elif choice == 4:
             print("Goodbye!")
             break
